@@ -3,10 +3,7 @@ import { render } from "@testing-library/react";
 import { useSelect } from "@wordpress/data";
 
 jest.mock("@wordpress/data", () => {
-  const module = jest.requireActual("@wordpress/data");
-
   return {
-    ...module,
     useSelect: jest.fn().mockReturnValue({}),
   };
 });
