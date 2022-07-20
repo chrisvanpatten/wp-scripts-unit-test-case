@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@wordpress/components": "^19.15.0",
     "@wordpress/data": "^6.13.0"
   },
   "devDependencies": {

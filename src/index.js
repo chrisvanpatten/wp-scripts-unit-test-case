@@ -1,4 +1,5 @@
 import { useSelect } from "@wordpress/data";
+import { BaseControl } from "@wordpress/components";
 
 function MyComponent(props) {
   const { prefix } = props;
@@ -8,9 +9,11 @@ function MyComponent(props) {
   }, []);
 
   return (
-    <h1>
-      {prefix} {title}
-    </h1>
+    <BaseControl>
+      <h1>
+        {prefix} {title}
+      </h1>
+    </BaseControl>
   );
 }
 
