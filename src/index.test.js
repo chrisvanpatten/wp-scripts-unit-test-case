@@ -4,6 +4,7 @@ import { useSelect } from "@wordpress/data";
 
 jest.mock("@wordpress/data", () => {
   return {
+    ...jest.requireActual("@wordpress/data"),
     useSelect: jest.fn().mockReturnValue({}),
   };
 });
