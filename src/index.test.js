@@ -3,9 +3,9 @@ import { render } from "@testing-library/react";
 import { useSelect } from "@wordpress/data";
 
 jest.mock("@wordpress/data", () => {
-  return {
-    useSelect: jest.fn().mockReturnValue({}),
-  };
+  const wpData = jest.requireActual("@wordpress/data");
+  Object.defineProperty(wpData, "useSelect", { value: jest.fn() });
+  return wpData;
 });
 
 describe("MyComponent", () => {
